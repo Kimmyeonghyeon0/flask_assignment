@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ data.title }}</title>
+</head>
+<body>
+    <h1>HI, {{ data.user }}!</h1>
+    {% if data.is_admin %}
+        <p>you have admin priviliges.</p>
+    {% else %}
+        <p>you do not have admin priviliges</p>
+    {% endif %}
+
+    <ul>
+        {% for item in data.item_list %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
