@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_smorest import Api
-from api import blp # type: ignore
+from api import blp
 
 app = Flask(__name__)
 

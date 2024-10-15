@@ -32,6 +32,7 @@ def create_user_blueprint(mysql):
         cursor.close()
         return jsonify({'message': 'User added successfully'}), 201
 
+#유저를 업데이트 하는 함수 (UPDATE)
     @user_blp.route('/<int:user_id>', methods=['PUT'])
     def update_user(user_id):
         user_data = request.json
@@ -42,6 +43,7 @@ def create_user_blueprint(mysql):
         cursor.close()
         return jsonify({'message': 'User updated successfully'})
 
+#유저를 삭제하는 함수(DELETE)
     @user_blp.route('/<int:user_id>', methods=['DELETE'])
     def delete_user(user_id):
         cursor = mysql.connection.cursor()
